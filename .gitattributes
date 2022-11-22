@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 *.pack filter=lfs diff=lfs merge=lfs -text
+=======
+# Auto detect text files and perform LF normalization
+* text=auto
+>>>>>>> f59d5b60bb0c5818d19169c30a4b9b4439ab4a8e
