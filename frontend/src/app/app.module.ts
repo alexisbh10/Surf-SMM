@@ -8,6 +8,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './carousel/carousel.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ObsComponent } from './obs/obs.component';
 
 
 @NgModule({
@@ -15,13 +17,15 @@ import { CarouselComponent } from './carousel/carousel.component';
     AppComponent,
     PlayerComponent,
     SidebarComponent,
-    CarouselComponent
+    CarouselComponent,
+    ObsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
+    HttpClientModule
 
   ],
   providers: [],

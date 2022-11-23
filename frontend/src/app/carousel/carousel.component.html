@@ -11,21 +11,12 @@
         </nav>
         <main class="content">
             <div class="container-fluid">
-    
-                <div class="header">
-                    <h1 class="header-title">
-                        Inicio
-                    </h1>
-                    <nav aria-label="breadcrumb">
-                    </nav>
-                </div>
-    
-                <div class="row">    
+              <div class="row">    
                                 <div class="row">
-                                        <ngb-carousel *ngIf="images">
+                                        <ngb-carousel *ngIf="images" style="margin-left:50px;margin: top 1px;width:1330px;height:550px;">
                                             <ng-template ngbSlide>
                                                 <div class="picsum-img-wrapper">
-                                                    <img [src]="images[0]" alt="Random first slide" style="width: 100%; height: 100vh"/>
+                                                    <img [src]="images[0]" alt="Random first slide" style="margin: top 1px;width:1330px;height:550px;"/>
                                                 </div>
                                                 <div class="carousel-caption">
                                                     <h3>First slide label</h3>
@@ -34,18 +25,18 @@
                                             </ng-template>
                                             <ng-template ngbSlide>
                                                 <div class="picsum-img-wrapper">
-                                                    <img src="https://www.camaramar.com/images/cameras/5ce1149709f1d_webcam%20galicia%20Camaramar%20%20Playa%20de%20Mendui%C3%B1a%20(R%C3%ADa%20de%20Ald%C3%A1n).jpg" alt="Praia de Menduiña" style="width: 100%; height: 100vh"/>
+                                                    <img src="https://www.camaramar.com/images/cameras/5ce1149709f1d_webcam%20galicia%20Camaramar%20%20Playa%20de%20Mendui%C3%B1a%20(R%C3%ADa%20de%20Ald%C3%A1n).jpg" alt="Praia de Menduiña"  style="width:1330px;height:550px;"/>
                                                 </div>
                                                 <div class="carousel-caption">
-                                                    <h3>Praia de Menduiña</h3>
+                                                  <a href="http://localhost:4200/camara/2">Praia de Menduiña</a>
                                                 </div>
                                             </ng-template>
                                             <ng-template ngbSlide>
                                                 <div class="picsum-img-wrapper">
-                                                    <img src="https://www.camaramar.com/images/news/607f381f6f294_webcam%20nigran%20patos.jpg" alt="Praia de Patos" style="width: 100%; height: 100vh"/>
+                                                    <img src="https://www.camaramar.com/images/news/607f381f6f294_webcam%20nigran%20patos.jpg" alt="Praia de Patos"  style="width:1330px;height:550px;"/>
                                                 </div>
                                                 <div class="carousel-caption">
-                                                    <h3>Praia de Patos</h3>
+                                                   <a href="http://localhost:4200/camara/3">Praia de Patos</a>
                                                 </div>
                                             </ng-template>
                                         </ngb-carousel>

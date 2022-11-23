@@ -1,6 +1,8 @@
 const NodeMediaServer = require('node-media-server');
-//C:\ffmpeg-4.4-full_build\bin
-//     ffmpeg: 'C:/ffmpeg-4.4-full_build/bin/ffmpeg.exe',
+var express = require('express'); 
+var app = express();
+
+
 const config = {
     rtmp: {
         port: 1935,

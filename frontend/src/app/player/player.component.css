@@ -1768,3 +1768,4 @@ video::-webkit-media-text-track-display {
 .video-js *:focus:not(:focus-visible) {
   outline: none;
 }
+
