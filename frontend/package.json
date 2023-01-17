@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "-": "^0.0.1",
     "@angular/animations": "^14.2.0",
     "@angular/cdk": "^13.0.0",
     "@angular/common": "^14.2.0",
@@ -25,9 +26,24 @@
     "@ngu/carousel": "^6.0.1",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.2",
+    "child_process": "^1.0.2",
+    "debug": "^4.3.4",
+    "fs": "^0.0.1-security",
+    "fs-web": "^1.0.1",
     "hls.js": "^1.2.7",
+    "node": "^19.4.0",
+    "npm": "^9.3.0",
+    "obs-websocket-js": "^5.0.2",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "process": "^0.11.10",
+    "pyscript": "^1.0.6",
+    "python-shell": "^3.0.1",
     "rxjs": "~7.5.0",
+    "stream": "^0.0.2",
     "tslib": "^2.3.0",
+    "util": "^0.12.5",
+    "vendor": "^1.7.0",
     "video.js": "^7.20.3",
     "vjs-video": "^0.1.11",
     "zone.js": "~0.11.4"
@@ -37,6 +53,7 @@
     "@angular/cli": "~14.2.8",
     "@angular/compiler-cli": "^14.2.0",
     "@angular/localize": "^14.2.11",
+    "@types/debug": "^4.1.7",
     "@types/jasmine": "~4.0.0",
     "@types/video.js": "^7.3.49",
     "jasmine-core": "~4.3.0",
@@ -46,5 +63,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.7.2"
+  },
+  "browser": {
+    "child_process": false,
+    "crypto": false
   }
 }

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, Injectable } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import HLS from 'hls.js';
@@ -12,6 +12,7 @@ const obs = new OBSWebSocket();
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.css']
 })
+@Injectable()
 
 export class PlayerComponent implements OnInit {
   private url: string = "";
@@ -39,6 +40,13 @@ export class PlayerComponent implements OnInit {
     } else if (this.url == "/camara/3") {
       this.load("https://wow.camaramar.com/camaramar/65_patos.stream/playlist.m3u8");
     }
+    
+    let node = document.createElement('script');
+    node.src = "player_javascript.js";
+    node.type = 'text/javascript';
+    node.async = true;
+    node.charset = 'utf-8';
+    document.getElementsByTagName('head')[0].appendChild(node);
   }
 
   public load(currentVideo: string): void {
@@ -54,7 +62,13 @@ export class PlayerComponent implements OnInit {
     this.hls.attachMedia(this.video.nativeElement);
   }
 
-  
+  public ejecutar_python(){
+  	const {PythonShell} = require('python-shell');
+  	
+  	PythonShell.run('script_python.py', undefined, function(): any{
+  		
+  	});
+  }
 
 }
 
