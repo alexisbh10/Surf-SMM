@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import sys
 
-cap = cv2.VideoCapture("niebla1.mkv")
+cap = cv2.VideoCapture("http://localhost:8000/live/STREAM_NAME/index.m3u8")
 
 blancoBajo = np.array([0, 0, 0], np.uint8)
 blancoAlto = np.array([179, 50, 255], np.uint8)
@@ -25,7 +25,7 @@ while True:
 			if blanco / (blanco + negro) > 0.7: print(True)
 			else: print(False)
 			sys.stdout.flush()
-	else: break
+	#else: break
 	nFrames += 1
 cap.release()
 cv2.destroyAllWindows()
