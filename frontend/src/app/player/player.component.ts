@@ -66,7 +66,6 @@ export class PlayerComponent implements OnInit {
   	const {PythonShell} = require('python-shell');
   	
   	PythonShell.run('script_python.py', undefined, function(): any{
-  		
   	});
   }
 

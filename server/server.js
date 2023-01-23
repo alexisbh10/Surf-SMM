@@ -1,6 +1,7 @@
 const NodeMediaServer = require('node-media-server');
 var express = require('express'); 
 var app = express();
+const {PythonShell} = require('python-shell');
 
 
 const config = {
@@ -17,7 +18,7 @@ const config = {
         allow_origin: '*'
     },
     trans: {
-        ffmpeg: 'C:/Users/Alexi/Downloads/ffmpeg-2022-10-02-git-5f02a261a2-full_build/ffmpeg-2022-10-02-git-5f02a261a2-full_build/bin/ffmpeg.exe',
+        ffmpeg: '/usr/bin/ffmpeg',
         tasks: [
             {
                 app: 'live',
@@ -29,6 +30,26 @@ const config = {
         ]
     }
 };
+
+var niebla = '';
+let pyshell = new PythonShell('script_python.py');
+
+pyshell.send('Darío');
+pyshell.on('message', function(msg){
+	console.log(msg);
+	niebla += msg + ' ';
+});
+
+pyshell.end(function(err, code, signal){
+	if(err) throw err;
+	console.log('Código de salida: ' + code);
+	console.log('Señal de salida: ' + signal);
+	console.log('Terminado');
+});
+
+
+app.get('/', (req, res) => res.send(niebla))
+app.listen(8001);
 
 var nms = new NodeMediaServer(config)
 nms.run();

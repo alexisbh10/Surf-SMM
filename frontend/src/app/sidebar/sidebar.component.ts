@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 
 @Component({
@@ -15,5 +16,11 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  hayNiebla(){
+  	return this.http.get<boolean>('http://localhost:8001/');
+  }
 
 }
+
+
