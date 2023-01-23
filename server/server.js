@@ -18,7 +18,7 @@ const config = {
         allow_origin: '*'
     },
     trans: {
-        ffmpeg: '/usr/bin/ffmpeg',
+        ffmpeg: 'C:/Users/pblan/ffmpeg-master-latest-win64-gpl/bin/ffmpeg.exe',
         tasks: [
             {
                 app: 'live',
@@ -45,6 +45,12 @@ pyshell.end(function(err, code, signal){
 	console.log('Código de salida: ' + code);
 	console.log('Señal de salida: ' + signal);
 	console.log('Terminado');
+});
+
+app.use(function(req, res, next){
+  res.header("Access-Control-Allow-Origin", "http://localhost:4200"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
 });
 
 

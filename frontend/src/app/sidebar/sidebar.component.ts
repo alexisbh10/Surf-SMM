@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-
+const axios = require('axios').default;
 
 @Component({
   selector: 'app-sidebar',
@@ -17,8 +17,14 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  hayNiebla(){
-  	return this.http.get<boolean>('http://localhost:8001/');
+  async hayNiebla(){
+    var result = "Error";
+    try{
+      const response = await axios.get('http://localhost:8001')
+      console.log(response)
+    }catch(error){
+      console.log(error)
+    }
   }
 
 }
