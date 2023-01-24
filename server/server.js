@@ -18,7 +18,7 @@ const config = {
         allow_origin: '*'
     },
     trans: {
-        ffmpeg: 'C:/Users/pblan/ffmpeg-master-latest-win64-gpl/bin/ffmpeg.exe',
+        ffmpeg: 'C:/Users/Alexi/Downloads/ffmpeg-2022-10-02-git-5f02a261a2-full_build/ffmpeg-2022-10-02-git-5f02a261a2-full_build/bin/ffmpeg.exe',
         tasks: [
             {
                 app: 'live',
