@@ -34,7 +34,7 @@ const config = {
 var niebla = '';
 let pyshell = new PythonShell('script_python.py');
 
-pyshell.send('Darío');
+/*pyshell.send('Darío');
 pyshell.on('message', function(msg){
 	console.log(msg);
 	niebla += msg + ' ';
@@ -45,7 +45,7 @@ pyshell.end(function(err, code, signal){
 	console.log('Código de salida: ' + code);
 	console.log('Señal de salida: ' + signal);
 	console.log('Terminado');
-});
+});*/
 
 app.use(function(req, res, next){
   res.header("Access-Control-Allow-Origin", "http://localhost:4200"); // update to match the domain you will make the request from
@@ -53,9 +53,9 @@ app.use(function(req, res, next){
   next();
 });
 
-
-app.get('/', (req, res) => res.send(niebla))
-app.listen(8001);
+console.log("Servidor iniciado correctamente")
+/*app.get('/', (req, res) => res.send(niebla))
+app.listen(8001);*/
 
 var nms = new NodeMediaServer(config)
 nms.run();
